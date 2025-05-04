@@ -98,16 +98,28 @@
     Your browser does not support the audio element.
   </audio>
   <script>
-    window.addEventListener('click', function () {
-      const music = document.getElementById('background-music');
-      music.muted = false;
-      music.play().catch(function (e) {
-        console.log("Autoplay failed:", e);
-      });
-    }, { once: true }); // runs only once
+    document.addEventListener('DOMContentLoaded', function() {
+  const music = document.getElementById('background-music');
+  
+  // Try muted autoplay (works in most browsers)
+  music.play().catch(e => console.log("Muted autoplay blocked:", e));
 
+  // Unmute & play on first user interaction (click/tap)
+  const enableSound = () => {
+    music.muted = false;
+    music.play().catch(e => console.log("Unmute failed:", e));
+    // Remove event listeners after first interaction
+    document.removeEventListener('click', enableSound);
+    document.removeEventListener('touchstart', enableSound);
+  };
+
+  // Listen for both click (desktop) and touch (mobile)
+  document.addEventListener('click', enableSound, { once: true });
+  document.addEventListener('touchstart', enableSound, { once: true });
+});
    
   </script>
+  
   
   
   <script src="mobile.js"></script>
