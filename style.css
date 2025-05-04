@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+/* === General Body Styling === */
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://www.psdgraphics.com/wp-content/uploads/2022/01/white-math-paper-texture.jpg");
+  background-size: 1000px;
+  background-position: center center;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* === Base Paper Style === */
+.paper {
+  background-image: url("https://i0.wp.com/textures.world/wp-content/uploads/2018/10/2-Millimeter-Paper-Background-copy.jpg?ssl=1");
+  background-size: 500px;
+  background-position: center center;
+  padding: 20px 100px;
+  position: absolute;
+  transform: rotateZ(-5deg);
+  box-shadow: 1px 15px 20px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  cursor: grab;
+}
+
+/* === Paper: Heart === */
+.paper-heart {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  border-radius: 50%;  /* Ensures it's a circle */
+  background-color: white;
+  background-image: none;
+  box-shadow: 1px 15px 20px 0px rgba(255, 0, 0, 0.4);
+}
+
+.paper-heart::after {
+  content: "";
+  background-image: url('images/happy birthday.png'); /* Relative path to the image */
+  width: 100%; /* Make it take up the full width of the parent element */
+  height: 100%; /* Make it take up the full height of the parent element */
+  position: absolute; /* Position it within the parent element */
+  top: 0; /* Align to the top of the parent */
+  left: 0; /* Align to the left of the parent */
+  background-size: 100% 100%; /* Ensures the image stretches to cover the div */
+  background-position: center center; /* Centers the image within the div */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  border-radius: 50%; /* Ensure the image fits inside the circular shape */
+  opacity: 0.8; /* Adjust opacity as needed */
+}
+
+
+
+
+/* === Paper: Birthday === */
+.paper-birthday p {
+  font-size: 40px;
+  text-align: center;
+}
+
+/* === Paper: Message 1 to 8 === */
+.paper-message1 p,
+.paper-message2 p,
+.paper-message3 p,
+.paper-message4 p,
+.paper-message5 p,
+.paper-message6 p,
+.paper-message7 p,
+.paper-message8 p {
+  font-size: 30px;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.paper-message1 img{
+  max-height:500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+.paper-message2 img {
+  max-height: 300px;       /* or adjust to your design */
+  width: auto;             /* maintain natural width */
+  max-width: 100%;         /* prevent overflow */
+  display: block;          /* enables centering */
+  margin: 0 auto;          /* center image horizontally */
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.paper-message3 img{
+  max-height:400px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+.paper-message4 img{
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+.paper-message5 img {
+  max-height: 350px;       /* reduced height from 700px */
+  width: auto;             /* maintain aspect ratio */
+  max-width: 100%;         /* prevent overflow */
+  display: block;          /* required for margin auto centering */
+  margin: 0 auto;          /* center horizontally */
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.paper-message6 img {
+  max-height:300px;      /* reduced height */
+  width: auto;             /* preserve natural width */
+  max-width: 100%;         /* prevent overflow */
+  display: block;          /* enables margin auto */
+  margin: 0 auto;          /* center horizontally */
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.paper-message7 img {
+  max-height: 200px;
+  width: auto; /* or set a fixed width like 80% or 300px */
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.paper-message8 img {
+  max-height: 200px;
+  width: auto;             /* maintain aspect ratio */
+  max-width: 100%;         /* prevent overflow on smaller screens */
+  display: block;          /* allows centering */
+  margin: 0 auto;          /* center image horizontally */
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.paper-birthday img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  user-select: none;
+}
+
+/* === Red Paper Variant === */
+.paper-red {
+  background-color: #ffe6e6;
+  border: 2px dashed red;
+  padding: 30px 80px;
+}
+
+.paper-red .p1,
+.paper-red .p2 {
+  font-size: 40px;
+  color: darkred;
+  text-align: center;
+}
+
+/* === Final Message Paper === */
+.paper-final {
+  background-color: #f5f5dc;
+  padding: 30px 80px;
+}
+
+.paper-final .p1 {
+  font-size: 38px;
+  text-align: center;
+  color: rgb(80, 0, 80);
+}
+
+/* === Instruction Paper === */
+.paper-instruction {
+  background-color: #fffacd;
+  padding: 25px 60px;
+}
+
+.paper-instruction .p1 {
+  font-size: 36px;
+  color: darkblue;
+  text-align: center;
+}
+
+/* === Global Text Styling === */
+p {
+  font-family: 'Zeyada', cursive;
+  font-size: 50px;
+  color: rgb(0, 0, 100);
+  opacity: 0.75;
+  user-select: none;
+  margin: 10px 0;
+  /* Optional shadow: */
+  /* filter: drop-shadow(2px 1.5px 1px rgba(0, 0, 105, 0.9)); */
+}
+
+audio {
+  display: none;
+}
+
+
+

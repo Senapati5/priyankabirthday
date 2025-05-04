@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Drag Papers ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Zeyada&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- <div class="loader" id="page-loader"></div> -->
+
+  <!-- Heart Shape Paper -->
+  <div class="paper paper-heart"></div>
+
+  <!-- Birthday Message -->
+  <div class="paper paper-birthday">
+    <p>HAPPY BIRTHDAY 🎂</p>
+    <img src="images/p9.jpg" alt="Birthday image">
+  </div>
+
+  <!-- Message 1 -->
+  <div class="paper paper-message1">
+    <p>No matter where life has taken us,</p>
+    <p>I hope today reminds you how loved you are.</p>
+    <img src="images/p3.jpg" alt="Image 1">
+  </div>
+
+  <!-- Message 2 -->
+  <div class="paper paper-message2">
+    <p>Our paths may have parted,</p>
+    <p>but I still believe you deserve </p>
+    <p>all the beautiful things life has to offer.</p>
+    <img src="images/WhatsApp Image 2025-05-04 at 19.57.24_fc9bee0b.jpg"alt="Image 2">
+  </div>
+
+  <!-- Message 3 -->
+  <div class="paper paper-message3">
+    <p>Even if we no longer share our lives,</p>
+    <p>I’ll never forget how much your friendship meant.</p>
+    <img src="images/p10.jpg" alt="Image 3">
+  </div>
+
+  <!-- Message 4 -->
+  <div class="paper paper-message4">
+    <p>I still remember the laughter</p>
+    <p>and the late-night talks.</p>
+    <img src="images/p6.jpg" alt="Image 4">
+  </div>
+
+  <!-- Message 5 -->
+  <div class="paper paper-message5">
+    <p>You were important to me,</p>
+    <p>even if we aren’t part of each other’s stories anymore.</p>
+    <img src="images/p7.jpg" alt="Image 5">
+  </div>
+
+  <!-- Message 6 -->
+  <div class="paper paper-message6">
+    <p>We outgrew each other,</p>
+    <p>and that's part of growing up.</p>
+    <img src="images/p2.jpg"alt="Image 6">
+  </div>
+
+  <!-- Message 7 -->
+  <div class="paper paper-message7">
+    <p>Not every friendship is meant to last forever,</p>
+    <p>but that doesn’t mean it wasn’t real.</p>
+    <img src="images/p1.jpg" alt="Image 7">
+  </div>
+
+  <!-- Message 8 -->
+  <div class="paper paper-message8">
+    <p>You were my person once,</p>
+    <p>and a part of me will always miss that.</p>
+    <img src="images/p8.jpg"alt="Image 8">
+  </div>
+
+  <!-- Red Paper Message -->
+  <div class="paper paper-red">
+    <p class="p1">We may not talk anymore like before,</p>
+    <p class="p2">but I still smile at the memories.</p>
+  </div>
+
+  <!-- Final Thought -->
+  <div class="paper paper-final">
+    <p class="p1">I didn't know if this was special for you,</p>
+    <p class="p1">But I did my best to make the day perfect for you ❤️</p>
+  </div>
+
+  <!-- Drag Instruction -->
+  <div class="paper paper-instruction">
+    <p class="p1">Drag the papers to move!</p>
+  </div>
+
+  <audio id="background-music" autoplay loop muted>
+    <source src="images/perfect by Ed Sheeran . WhatsApp status....mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    window.addEventListener('click', function () {
+      const music = document.getElementById('background-music');
+      music.muted = false;
+      music.play().catch(function (e) {
+        console.log("Autoplay failed:", e);
+      });
+    }, { once: true }); // runs only once
+
+   
+  </script>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
